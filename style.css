@@ -1,0 +1,165 @@
+/*Stile del corpo della pagina*/
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+/*Stile del Box*/
+.box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#fff, #757575);
+    overflow: hidden;
+}
+
+/*Stile del Before del Box*/
+.box:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 5px;
+    background: #000;
+}
+
+/*Stile dell'After del Box*/
+.box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 100%;
+    background: #000;
+}
+
+/*Cerchio*/
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/*Cerchio Numero 2*/
+.circle.circle2 {
+    width: 600px;
+    height: 600px;
+}
+
+/*Riga che gira*/
+.niddle {
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 50%;
+    height: 4px;
+    width: 1200px;
+    background: #000;
+    animation: animate 1s linear infinite;
+    transform-origin: left;
+}
+
+/*Animazione*/
+@keyframes animate {
+    0% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+/*Stile dei numeri*/
+.number {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/*Stile dei div dei numeri*/
+.number div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 25em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: animateNumber 10s linear infinite;
+}
+
+/*Primo numero*/
+.number div:nth-child(1) {
+    animation-delay: 0s;
+}
+
+/*Secondo numero*/
+.number div:nth-child(2) {
+    animation-delay: 1s;
+}
+
+/*Terzo numero*/
+.number div:nth-child(3) {
+    animation-delay: 2s;
+}
+
+/*Quarto numero*/
+.number div:nth-child(4) {
+    animation-delay: 3s;
+}
+
+/*Quinto numero*/
+.number div:nth-child(5) {
+    animation-delay: 4s;
+}
+
+/*Sesto numero*/
+.number div:nth-child(6) {
+    animation-delay: 5s;
+}
+
+/*Settimo numero*/
+.number div:nth-child(7) {
+    animation-delay: 6s;
+}
+
+/*Ottavo numero*/
+.number div:nth-child(8) {
+    animation-delay: 7s;
+}
+
+/*Nono numero*/
+.number div:nth-child(9) {
+    animation-delay: 8s;
+}
+
+/*Decimo numero*/
+.number div:nth-child(10) {
+    animation-delay: 9s;
+}
+
+/*Animazione dei numeri*/
+@keyframes animateNumber {
+    0%,10% {
+        opacity: 1;
+    }
+
+    10.01%,100% {
+        opacity: 0;
+    }
+}
